@@ -1,16 +1,16 @@
 import java.util.Random;
 
 public class MagicBox<T> {
-    int numberOfCells;
-    int numberOfObjects;
-    T[] array;
+    protected int numberOfCells;
+    protected int numberOfObjects;
+    protected T[] array;
 
     public MagicBox(int numberOfCells) {
         this.numberOfCells = numberOfCells;
         array = (T[]) new Object[numberOfCells];
     }
 
-    boolean add(T item) {
+    public boolean add(T item) {
         if (numberOfObjects < numberOfCells) {
             array[numberOfObjects] = item;
             numberOfObjects++;
